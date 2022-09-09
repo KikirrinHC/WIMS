@@ -7,22 +7,33 @@
     </div>
 
     <div class="card-body">
+<<<<<<< HEAD
         <form method="POST" action="{{ route('admin.permissions.update', [$permission->id]) }}"
             enctype="multipart/form-data">
+=======
+        <form method="POST" action="{{ route("admin.permissions.update", [$permission->id]) }}" enctype="multipart/form-data">
+>>>>>>> 2f6eb3e0138d7dca51bdac755494a0341fed929d
             @method('PUT')
             @csrf
             <div class="form-group">
                 <label class="required" for="title">{{ trans('cruds.permission.fields.title') }}</label>
+<<<<<<< HEAD
                 <input class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}" type="text" name="title"
                     id="title" value="{{ old('title', $permission->title) }}" required>
                 @if($errors->has('title'))
                 <div class="invalid-feedback">
                     {{ $errors->first('title') }}
                 </div>
+=======
+                <input class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}" type="text" name="title" id="title" value="{{ old('title', $permission->title) }}" required>
+                @if($errors->has('title'))
+                    <span class="text-danger">{{ $errors->first('title') }}</span>
+>>>>>>> 2f6eb3e0138d7dca51bdac755494a0341fed929d
                 @endif
                 <span class="help-block">{{ trans('cruds.permission.fields.title_helper') }}</span>
             </div>
             <div class="form-group">
+<<<<<<< HEAD
                 <label>{{ trans('cruds.permission.fields.module') }}</label>
                 <select class="form-control {{ $errors->has('module') ? 'is-invalid' : '' }}" name="module" id="module">
                     <option value disabled {{ old('module', null)===null ? 'selected' : '' }}>{{
@@ -41,6 +52,9 @@
             </div>
             <div class="form-group">
                 <button class="btn btn-success" type="submit">
+=======
+                <button class="btn btn-danger" type="submit">
+>>>>>>> 2f6eb3e0138d7dca51bdac755494a0341fed929d
                     {{ trans('global.save') }}
                 </button>
             </div>

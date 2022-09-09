@@ -15,6 +15,7 @@
     </div>
 
     <div class="card-body">
+<<<<<<< HEAD
         <div class="table-responsive">
             <table class=" table table-bordered table-striped table-hover datatable datatable-UserAlert">
                 <thead>
@@ -88,6 +89,35 @@
                 </tbody>
             </table>
         </div>
+=======
+        <table class=" table table-bordered table-striped table-hover ajaxTable datatable datatable-UserAlert">
+            <thead>
+                <tr>
+                    <th width="10">
+
+                    </th>
+                    <th>
+                        {{ trans('cruds.userAlert.fields.id') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.userAlert.fields.alert_text') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.userAlert.fields.alert_link') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.userAlert.fields.user') }}
+                    </th>
+                    <th>
+                        {{ trans('cruds.userAlert.fields.created_at') }}
+                    </th>
+                    <th>
+                        &nbsp;
+                    </th>
+                </tr>
+            </thead>
+        </table>
+>>>>>>> 2f6eb3e0138d7dca51bdac755494a0341fed929d
     </div>
 </div>
 
@@ -100,14 +130,23 @@
     $(function () {
   let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
 @can('user_alert_delete')
+<<<<<<< HEAD
   let deleteButtonTrans = '{{ trans('global.datatables.delete') }}'
+=======
+  let deleteButtonTrans = '{{ trans('global.datatables.delete') }}';
+>>>>>>> 2f6eb3e0138d7dca51bdac755494a0341fed929d
   let deleteButton = {
     text: deleteButtonTrans,
     url: "{{ route('admin.user-alerts.massDestroy') }}",
     className: 'btn-danger',
     action: function (e, dt, node, config) {
+<<<<<<< HEAD
       var ids = $.map(dt.rows({ selected: true }).nodes(), function (entry) {
           return $(entry).data('entry-id')
+=======
+      var ids = $.map(dt.rows({ selected: true }).data(), function (entry) {
+          return entry.id
+>>>>>>> 2f6eb3e0138d7dca51bdac755494a0341fed929d
       });
 
       if (ids.length === 0) {
@@ -129,18 +168,46 @@
   dtButtons.push(deleteButton)
 @endcan
 
+<<<<<<< HEAD
   $.extend(true, $.fn.dataTable.defaults, {
     orderCellsTop: true,
     order: [[ 1, 'desc' ]],
     pageLength: 100,
   });
   let table = $('.datatable-UserAlert:not(.ajaxTable)').DataTable({ buttons: dtButtons })
+=======
+  let dtOverrideGlobals = {
+    buttons: dtButtons,
+    processing: true,
+    serverSide: true,
+    retrieve: true,
+    aaSorting: [],
+    ajax: "{{ route('admin.user-alerts.index') }}",
+    columns: [
+      { data: 'placeholder', name: 'placeholder' },
+{ data: 'id', name: 'id' },
+{ data: 'alert_text', name: 'alert_text' },
+{ data: 'alert_link', name: 'alert_link' },
+{ data: 'user', name: 'users.name' },
+{ data: 'created_at', name: 'created_at' },
+{ data: 'actions', name: '{{ trans('global.actions') }}' }
+    ],
+    orderCellsTop: true,
+    order: [[ 1, 'desc' ]],
+    pageLength: 100,
+  };
+  let table = $('.datatable-UserAlert').DataTable(dtOverrideGlobals);
+>>>>>>> 2f6eb3e0138d7dca51bdac755494a0341fed929d
   $('a[data-toggle="tab"]').on('shown.bs.tab click', function(e){
       $($.fn.dataTable.tables(true)).DataTable()
           .columns.adjust();
   });
   
+<<<<<<< HEAD
 })
+=======
+});
+>>>>>>> 2f6eb3e0138d7dca51bdac755494a0341fed929d
 
 </script>
 @endsection

@@ -31,6 +31,7 @@
                             {{ $permission->title }}
                         </td>
                     </tr>
+<<<<<<< HEAD
                     <tr>
                         <th>
                             {{ trans('cruds.permission.fields.module') }}
@@ -39,6 +40,8 @@
                             {{ $permission->module }}
                         </td>
                     </tr>
+=======
+>>>>>>> 2f6eb3e0138d7dca51bdac755494a0341fed929d
                 </tbody>
             </table>
             <div class="form-group">

@@ -17,9 +17,13 @@
                     @endforeach
                 </select>
                 @if($errors->has('category'))
+<<<<<<< HEAD
                     <div class="invalid-feedback">
                         {{ $errors->first('category') }}
                     </div>
+=======
+                    <span class="text-danger">{{ $errors->first('category') }}</span>
+>>>>>>> 2f6eb3e0138d7dca51bdac755494a0341fed929d
                 @endif
                 <span class="help-block">{{ trans('cruds.faqQuestion.fields.category_helper') }}</span>
             </div>
@@ -27,9 +31,13 @@
                 <label class="required" for="question">{{ trans('cruds.faqQuestion.fields.question') }}</label>
                 <textarea class="form-control {{ $errors->has('question') ? 'is-invalid' : '' }}" name="question" id="question" required>{{ old('question') }}</textarea>
                 @if($errors->has('question'))
+<<<<<<< HEAD
                     <div class="invalid-feedback">
                         {{ $errors->first('question') }}
                     </div>
+=======
+                    <span class="text-danger">{{ $errors->first('question') }}</span>
+>>>>>>> 2f6eb3e0138d7dca51bdac755494a0341fed929d
                 @endif
                 <span class="help-block">{{ trans('cruds.faqQuestion.fields.question_helper') }}</span>
             </div>
@@ -37,9 +45,13 @@
                 <label class="required" for="answer">{{ trans('cruds.faqQuestion.fields.answer') }}</label>
                 <textarea class="form-control {{ $errors->has('answer') ? 'is-invalid' : '' }}" name="answer" id="answer" required>{{ old('answer') }}</textarea>
                 @if($errors->has('answer'))
+<<<<<<< HEAD
                     <div class="invalid-feedback">
                         {{ $errors->first('answer') }}
                     </div>
+=======
+                    <span class="text-danger">{{ $errors->first('answer') }}</span>
+>>>>>>> 2f6eb3e0138d7dca51bdac755494a0341fed929d
                 @endif
                 <span class="help-block">{{ trans('cruds.faqQuestion.fields.answer_helper') }}</span>
             </div>

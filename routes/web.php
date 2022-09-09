@@ -1,7 +1,10 @@
 <?php
 
+<<<<<<< HEAD
 use App\Http\Controllers\Admin\InventarioprincipalController;
 
+=======
+>>>>>>> 2f6eb3e0138d7dca51bdac755494a0341fed929d
 Route::redirect('/', '/login');
 Route::get('/home', function () {
     if (session('status')) {
@@ -69,6 +72,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('cat-tallas/destroy', 'CatTallasController@massDestroy')->name('cat-tallas.massDestroy');
     Route::resource('cat-tallas', 'CatTallasController');
 
+<<<<<<< HEAD
     // Inventarioprincipal
     Route::delete('inventarioprincipals/destroy', 'InventarioprincipalController@massDestroy')->name('inventarioprincipals.massDestroy');
     Route::get('inventarioprincipals/edit/{id}/{tipo}', 'InventarioprincipalController@edit')->name('inventarioprincipals.edit');
@@ -122,6 +126,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('empleados/process-csv-import', 'EmpleadosController@processCsvImport')->name('empleados.processCsvImport');
     Route::resource('empleados', 'EmpleadosController');
 
+=======
+>>>>>>> 2f6eb3e0138d7dca51bdac755494a0341fed929d
     Route::get('messenger', 'MessengerController@index')->name('messenger.index');
     Route::get('messenger/create', 'MessengerController@createTopic')->name('messenger.createTopic');
     Route::post('messenger', 'MessengerController@storeTopic')->name('messenger.storeTopic');
@@ -141,6 +147,7 @@ Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 
         Route::post('profile/destroy', 'ChangePasswordController@destroy')->name('password.destroyProfile');
     }
 });
+<<<<<<< HEAD
 /*
 Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin'], function () {
     // Asignaciones
@@ -150,3 +157,5 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin'], 
     Route::apiResource('empleados', 'EmpleadosApiController');
 });
 */
+=======
+>>>>>>> 2f6eb3e0138d7dca51bdac755494a0341fed929d

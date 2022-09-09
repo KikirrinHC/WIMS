@@ -14,9 +14,13 @@
                 <label class="required" for="category">{{ trans('cruds.faqCategory.fields.category') }}</label>
                 <input class="form-control {{ $errors->has('category') ? 'is-invalid' : '' }}" type="text" name="category" id="category" value="{{ old('category', $faqCategory->category) }}" required>
                 @if($errors->has('category'))
+<<<<<<< HEAD
                     <div class="invalid-feedback">
                         {{ $errors->first('category') }}
                     </div>
+=======
+                    <span class="text-danger">{{ $errors->first('category') }}</span>
+>>>>>>> 2f6eb3e0138d7dca51bdac755494a0341fed929d
                 @endif
                 <span class="help-block">{{ trans('cruds.faqCategory.fields.category_helper') }}</span>
             </div>

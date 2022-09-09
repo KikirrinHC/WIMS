@@ -13,9 +13,13 @@
                 <label class="required" for="alert_text">{{ trans('cruds.userAlert.fields.alert_text') }}</label>
                 <input class="form-control {{ $errors->has('alert_text') ? 'is-invalid' : '' }}" type="text" name="alert_text" id="alert_text" value="{{ old('alert_text', '') }}" required>
                 @if($errors->has('alert_text'))
+<<<<<<< HEAD
                     <div class="invalid-feedback">
                         {{ $errors->first('alert_text') }}
                     </div>
+=======
+                    <span class="text-danger">{{ $errors->first('alert_text') }}</span>
+>>>>>>> 2f6eb3e0138d7dca51bdac755494a0341fed929d
                 @endif
                 <span class="help-block">{{ trans('cruds.userAlert.fields.alert_text_helper') }}</span>
             </div>
@@ -23,9 +27,13 @@
                 <label for="alert_link">{{ trans('cruds.userAlert.fields.alert_link') }}</label>
                 <input class="form-control {{ $errors->has('alert_link') ? 'is-invalid' : '' }}" type="text" name="alert_link" id="alert_link" value="{{ old('alert_link', '') }}">
                 @if($errors->has('alert_link'))
+<<<<<<< HEAD
                     <div class="invalid-feedback">
                         {{ $errors->first('alert_link') }}
                     </div>
+=======
+                    <span class="text-danger">{{ $errors->first('alert_link') }}</span>
+>>>>>>> 2f6eb3e0138d7dca51bdac755494a0341fed929d
                 @endif
                 <span class="help-block">{{ trans('cruds.userAlert.fields.alert_link_helper') }}</span>
             </div>
@@ -41,9 +49,13 @@
                     @endforeach
                 </select>
                 @if($errors->has('users'))
+<<<<<<< HEAD
                     <div class="invalid-feedback">
                         {{ $errors->first('users') }}
                     </div>
+=======
+                    <span class="text-danger">{{ $errors->first('users') }}</span>
+>>>>>>> 2f6eb3e0138d7dca51bdac755494a0341fed929d
                 @endif
                 <span class="help-block">{{ trans('cruds.userAlert.fields.user_helper') }}</span>
             </div>

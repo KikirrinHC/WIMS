@@ -5,7 +5,11 @@
     <div class="card-header">
         {{ trans('global.show') }} {{ trans('cruds.empresa.title') }}
     </div>
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 2f6eb3e0138d7dca51bdac755494a0341fed929d
     <div class="card-body">
         <div class="form-group">
             <div class="form-group">

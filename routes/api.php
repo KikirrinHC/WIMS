@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 //Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', 'middleware' => ['auth:sanctum']], function () {
 
 Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin'], function () {
@@ -20,4 +21,26 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin'], 
 
     // Empleados
     Route::apiResource('empleados', 'EmpleadosApiController');
+=======
+
+Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', 'middleware' => ['auth:sanctum']], function () {
+    // Empresa
+    Route::post('empresas/media', 'EmpresaApiController@storeMedia')->name('empresas.storeMedia');
+    Route::apiResource('empresas', 'EmpresaApiController');
+
+    // Agencia
+    Route::apiResource('agencia', 'AgenciaApiController');
+
+    // Zonas
+    Route::apiResource('zonas', 'ZonasApiController');
+
+    // Sucursal
+    Route::apiResource('sucursals', 'SucursalApiController');
+
+    // Cat Tiposprendas
+    Route::apiResource('cat-tiposprendas', 'CatTiposprendasApiController');
+
+    // Cat Tallas
+    Route::apiResource('cat-tallas', 'CatTallasApiController');
+>>>>>>> 2f6eb3e0138d7dca51bdac755494a0341fed929d
 });
